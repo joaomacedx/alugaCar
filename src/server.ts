@@ -6,4 +6,6 @@ const app = Express();
 app.use(Express.json());
 app.use(routes);
 
-app.listen(8080);
+app.listen(8080, () => {
+    console.log("server is running");
+});
