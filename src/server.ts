@@ -1,5 +1,9 @@
 import  Express  from 'express';
+import routes from './routes';
 
 const app = Express();
 
-app.listen("3333");
+app.use(Express.json());
+app.use(routes);
+
+app.listen(8080);
