@@ -5,5 +5,4 @@ routes.get('/', (request, response)=> {
    response.send({message: "Hello world!"});
 });
 
-
 export default routes;
