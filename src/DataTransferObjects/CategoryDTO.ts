@@ -1,5 +1,5 @@
 
-class CategoryDTO{
+class CategoryDTO {
      name: string;
      description: string; 
 }
