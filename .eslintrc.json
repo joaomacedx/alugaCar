@@ -10,6 +10,19 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "plugins": ["prettier", "@typescript-eslint"],
     "rules": {
+      "camelcase": "off",
+       "@typescript-eslint/name-convention":[
+        "error",
+        {
+          "selector": "interface",
+          "format": ["PascalCase"],
+          "custom":{
+            "regex":"^I[A-Z]",
+            "match" : "true"
+          } 
+        }
+      ]
     }
 }
