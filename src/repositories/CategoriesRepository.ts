@@ -11,6 +11,9 @@ class CategoriesRepository{
      const category = new Category(dto.name, dto.description, new Date()); 
      this.categories.push(category);
    }
+   public list(): Category[] {
+     return this.categories;
+   }
 }
 
 export { CategoriesRepository }
