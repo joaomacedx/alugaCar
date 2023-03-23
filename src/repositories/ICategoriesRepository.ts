@@ -4,7 +4,7 @@ import { Category } from "../model/Category";
  interface ICategoriesRepository{
    findByName(dto: CategoryDTO) : Category;
    list(): Category[];
-   create(dto:CategoryDTO): void;
+   save(dto:CategoryDTO): void;
 
  }
 

@@ -8,12 +8,7 @@ class CategoriesRepository implements ICategoriesRepository {
      this.categories = [];
    }
 
-   public create(dto : CategoryDTO): void {
-     const category = new Category(
-       dto.name,
-       dto.description,
-       new Date()
-     ); 
+   public save(category: Category): void {
      this.categories.push(category);
    }
    public list(): Category[] {
