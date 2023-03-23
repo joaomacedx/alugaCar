@@ -1,5 +1,4 @@
 import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
 import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
 class CreateCategoryService {
