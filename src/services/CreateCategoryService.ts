@@ -3,7 +3,7 @@ import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
 class CreateCategoryService {
    constructor(
-    private categoriesRepository: ICategoriesRepository) {
+     private categoriesRepository: ICategoriesRepository) {
    }
    public build(dto: CategoryDTO): void{ 
      const categoryAlreadyExists = this.categoriesRepository.findByName(dto);
