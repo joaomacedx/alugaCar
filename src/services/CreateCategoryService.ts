@@ -1,10 +1,10 @@
 import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
 import { CategoriesRepository } from "../repositories/CategoriesRepository";
+import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
 class CreateCategoryService {
-   private categoriesRepository: CategoriesRepository;
-   constructor(_categoriesRepository: CategoriesRepository) {
-     this.categoriesRepository =_categoriesRepository;
+   constructor(
+    private categoriesRepository: ICategoriesRepository) {
    }
    public build(dto: CategoryDTO): void{ 
      const categoryAlreadyExists = this.categoriesRepository.findByName(dto);
