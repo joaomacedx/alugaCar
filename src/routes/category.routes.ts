@@ -8,7 +8,7 @@ const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();
 const categoriesFactory = new CategoryFactory();
 
-categoriesRoutes.post("/categories", (request, response)=> {
+categoriesRoutes.post("/", (request, response)=> {
    const { name, description } = request.body;
    const dto = new CategoryDTO(name, description);
    const createCategoryService = new CreateCategoryService(categoriesRepository, categoriesFactory);
@@ -16,7 +16,7 @@ categoriesRoutes.post("/categories", (request, response)=> {
    response.status(201).send();
 });
 
-categoriesRoutes.get("/categories", (request, response)=> {
+categoriesRoutes.get("/", (request, response)=> {
    const all = categoriesRepository.list();
    response.json(all);
 });
