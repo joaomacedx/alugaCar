@@ -11,14 +11,21 @@ class CategoriesRepository implements ICategoriesRepository {
    public save(category: Category): void {
      this.categories.push(category);
    }
-   public list(): Category[] {
-     return this.categories;
+   public list(): CategoryDTO[] {
+     const list : CategoryDTO[] = [];
+     for (let index = 0; index < this.categories.length; index++) {
+       let element = this.categories[index];
+       let dto = new CategoryDTO(element.name, element.description);
+       list.push(dto);
+     }
+     return list;
    }
-   public findByName(dto: CategoryDTO): Category {
-     const category = this.categories.find((category) =>
-       category.name === dto.name
-     );
-     return category;
+   public findByName(data: CategoryDTO): CategoryDTO {
+     for(let index = 0; index < this.categories.length; index++) {
+       if(this.categories[index].name === data.name) {
+         return data;
+       }
+     }
    }
    
 }
