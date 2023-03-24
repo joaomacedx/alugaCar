@@ -1,4 +1,6 @@
-class SpecificationDTO {
+import { ISpecificationDTO } from "./ISpecificationDTO";
+
+class SpecificationDTO implements ISpecificationDTO {
    public name: string; 
    public description: string;
 

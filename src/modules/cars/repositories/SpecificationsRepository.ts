@@ -1,3 +1,4 @@
+import { ISpecificationDTO } from "../DataTransferObjects/ISpecificationDTO";
 import { SpecificationDTO } from "../DataTransferObjects/SpecificationDTO";
 import { Specification } from "../model/Specification";
 import { ISpecificationsRepository } from "./ISpecificationsRepository";
@@ -12,7 +13,8 @@ class SpecificationsRepository implements ISpecificationsRepository{
    public save(specification: Specification): void {
      this.specifications.push(specification);
    }
-   public list(): SpecificationDTO[] {
+
+   public list(): ISpecificationDTO[] {
      const list : SpecificationDTO[] = [];
      for (let index = 0; index < this.specifications.length; index++) {
        let element = this.specifications[index];
@@ -21,12 +23,13 @@ class SpecificationsRepository implements ISpecificationsRepository{
      }
      return list;
    }
-   public findByName(dto: SpecificationDTO): SpecificationDTO {
+   
+   public findByName(dto: ISpecificationDTO): SpecificationDTO {
      for(let index = 0; index < this.specifications.length; index++) {
-      if(this.specifications[index].name === dto.name) {
-        return dto;
-      }
+       if(this.specifications[index].name === dto.name) {
+         return dto;
+       }
      }
   }
-}
+ }
 export { SpecificationsRepository }

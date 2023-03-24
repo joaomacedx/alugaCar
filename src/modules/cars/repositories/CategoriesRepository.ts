@@ -1,4 +1,5 @@
 import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
+import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
 import { Category } from "../model/Category"; 
 import { ICategoriesRepository } from "./ICategoriesRepository";
 class CategoriesRepository implements ICategoriesRepository {
@@ -11,6 +12,7 @@ class CategoriesRepository implements ICategoriesRepository {
    public save(category: Category): void {
      this.categories.push(category);
    }
+
    public list(): CategoryDTO[] {
      const list : CategoryDTO[] = [];
      for (let index = 0; index < this.categories.length; index++) {
@@ -20,7 +22,8 @@ class CategoriesRepository implements ICategoriesRepository {
      }
      return list;
    }
-   public findByName(data: CategoryDTO): CategoryDTO {
+   
+   public findByName(data: ICategoryDTO): CategoryDTO {
      for(let index = 0; index < this.categories.length; index++) {
        if(this.categories[index].name === data.name) {
          return data;

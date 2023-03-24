@@ -6,7 +6,7 @@ class Category {
     description: string;
     created_at: Date;
 
-   constructor(_name : string,
+    constructor(_name : string,
        _description: string,
        _created_at : Date) {
     if(!this.id) {
@@ -15,7 +15,7 @@ class Category {
     this.created_at = _created_at;
     this.description = _description;
     this.name = _name;
-   }
+    }
 }
 
 export { Category }

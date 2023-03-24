@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { CategoryDTO } from '../DataTransferObjects/CategoryDTO';
-import { CategoryFactory } from '../Factories/CategoryFactory';
-import { CategoriesRepository } from '../repositories/CategoriesRepository';
-import { CreateCategoryService } from '../services/CreateCategoryService';
+import { CategoryDTO } from '../modules/cars/DataTransferObjects/CategoryDTO';
+import { CategoryFactory } from '../modules/cars/Factories/CategoryFactory';
+import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
+import { CreateCategoryService } from '../modules/cars/services/CreateCategoryService';
 
 const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();

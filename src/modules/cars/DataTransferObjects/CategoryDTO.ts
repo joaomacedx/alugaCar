@@ -1,5 +1,5 @@
-
-class CategoryDTO {
+import { ICategoryDTO } from "./ICategoryDTO";
+class CategoryDTO implements ICategoryDTO {
    public name: string;
    public description: string; 
    constructor(

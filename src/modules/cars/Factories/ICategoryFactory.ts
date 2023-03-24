@@ -1,8 +1,8 @@
-import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
+import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
 import { Category } from "../model/Category";
 
  interface ICategoryFactory{
-   build(dto: CategoryDTO) : Category;
+   build(dto: ICategoryDTO) : Category;
  }
 
  export { ICategoryFactory }

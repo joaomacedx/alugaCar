@@ -1,8 +1,8 @@
-import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
+import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
 import { Category } from "../model/Category";
 
 class CategoryFactory{
-   public build(dto: CategoryDTO): Category{
+   public build(dto: ICategoryDTO): Category{
      const category = new Category(dto.name, dto.description, new Date());
      return category;
    }

@@ -1,8 +1,9 @@
+import { ISpecificationDTO } from "../DataTransferObjects/ISpecificationDTO";
 import { SpecificationDTO } from "../DataTransferObjects/SpecificationDTO"
 import { Specification } from "../model/Specification";
 
 interface ISpecificationsRepository{
-   findByName(dto: SpecificationDTO) : SpecificationDTO;
+   findByName(dto: ISpecificationDTO) : SpecificationDTO;
    list(): SpecificationDTO[];
    save(specification: Specification) : void;
 
