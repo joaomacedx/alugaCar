@@ -12,8 +12,8 @@ class CreateSpecificationService {
      if (specificationAlreadyExists){
        throw new Error("Specification already exists");
      }
-     const category = this.specificationFactory.build(dto);
-     this.specificationRepository.save(category);
+     const specification = this.specificationFactory.build(dto);
+     this.specificationRepository.save(specification);
    }
 }
 

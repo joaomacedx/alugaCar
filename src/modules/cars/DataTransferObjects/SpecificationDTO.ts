@@ -8,7 +8,7 @@ class SpecificationDTO implements ISpecificationDTO {
      _name: string,
      _description: string) {
        this.name = _name;
-       this.description = this.description;
+       this.description = _description;
    }
 }
 
