@@ -7,7 +7,7 @@ class CreateSpecificationService {
      private specificationRepository: ISpecificationsRepository,
      private specificationFactory: ISpecificationFactory) {
    }
-   public create(dto: ISpecificationDTO): void{ 
+   public execute(dto: ISpecificationDTO): void{ 
      const specificationAlreadyExists = this.specificationRepository.findByName(dto);
      if (specificationAlreadyExists){
        throw new Error("Specification already exists");

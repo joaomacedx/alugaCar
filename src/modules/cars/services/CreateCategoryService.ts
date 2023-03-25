@@ -7,7 +7,7 @@ class CreateCategoryService {
      private categoriesRepository: ICategoriesRepository,
      private categoriesFactory: ICategoryFactory) {
    }
-   public create(dto: ICategoryDTO): void{ 
+   public execute(dto: ICategoryDTO): void{ 
      const categoryAlreadyExists = this.categoriesRepository.findByName(dto);
      if (categoryAlreadyExists){
        throw new Error("Category already exists");

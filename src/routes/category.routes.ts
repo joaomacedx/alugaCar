@@ -9,16 +9,16 @@ const categoriesRepository = new CategoriesRepository();
 const categoriesFactory = new CategoryFactory();
 
 categoriesRoutes.post("/", (request, response)=> {
-   const { name, description } = request.body;
-   const dto = new CategoryDTO(name, description);
-   const createCategoryService = new CreateCategoryService(categoriesRepository, categoriesFactory);
-   createCategoryService.create(dto);
-   response.status(201).send();
+    const { name, description } = request.body;
+    const dto = new CategoryDTO(name, description);
+    const createCategoryService = new CreateCategoryService(categoriesRepository, categoriesFactory);
+    createCategoryService.execute(dto);
+    response.status(201).send();
 });
 
 categoriesRoutes.get("/", (request, response)=> {
-   const all = categoriesRepository.list();
-   response.json(all);
+    const all = categoriesRepository.list();
+    response.json(all);
 });
 
 export { categoriesRoutes };
