@@ -1,14 +1,14 @@
 import { CategoryFactory } from "../../Factories/CategoryFactory";
-import { CategoriesRepository } from "../../repositories/CategoriesRepository";
-import { CreateCategoryService } from "../../services/CreateCategoryService";
+import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
+import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 import { CreateCategoryController } from "./CreateCategoryController";
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = CategoriesRepository.getInstance();
 
 const categoriesFactory= new CategoryFactory();
 
-const createCategoryService = new CreateCategoryService(categoriesRepository,categoriesFactory );
+const createCategoryUseCase =  new CreateCategoryUseCase(categoriesRepository,categoriesFactory );
 
-const createCategoryController = new CreateCategoryController(createCategoryService);
+const createCategoryController = new CreateCategoryController(createCategoryUseCase);
 
 export { createCategoryController }

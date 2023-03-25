@@ -1,8 +1,8 @@
-import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
-import { ICategoryFactory } from "../Factories/ICategoryFactory";
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoryDTO } from "../../DataTransferObjects/ICategoryDTO";
+import { ICategoryFactory } from "../../Factories/ICategoryFactory";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
-class CreateCategoryService {
+class CreateCategoryUseCase {
    constructor(
      private categoriesRepository: ICategoriesRepository,
      private categoriesFactory: ICategoryFactory) {
@@ -17,4 +17,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService }
+export {  CreateCategoryUseCase }

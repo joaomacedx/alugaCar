@@ -1,18 +1,27 @@
-import { ISpecificationDTO } from "../DataTransferObjects/ISpecificationDTO";
-import { SpecificationDTO } from "../DataTransferObjects/SpecificationDTO";
-import { Specification } from "../model/Specification";
-import { ISpecificationsRepository } from "./ISpecificationsRepository";
+import { ISpecificationDTO } from "../../DataTransferObjects/ISpecificationDTO";
+import { SpecificationDTO } from "../../DataTransferObjects/SpecificationDTO";
+import { Specification } from "../../model/Specification";
+import { ISpecificationsRepository } from "../ISpecificationsRepository";
 
 class SpecificationsRepository implements ISpecificationsRepository{
    private specifications: Specification[];
+
+   private static INSTANCE: SpecificationsRepository;
    
-   constructor(){
+   private constructor(){
      this.specifications = [];
    }
 
    public save(specification: Specification): void {
      this.specifications.push(specification);
    }
+
+   public static getInstance(): SpecificationsRepository {
+    if(!SpecificationsRepository.INSTANCE){
+      SpecificationsRepository.INSTANCE = new SpecificationsRepository();     
+    }
+    return SpecificationsRepository.INSTANCE;
+  }
 
    public list(): ISpecificationDTO[] {
      const list : SpecificationDTO[] = [];
