@@ -10,8 +10,13 @@ class CreateCategoryController{
    public handle(request: Request, response: Response): Response {
      const { name, description } = request.body;
      const dto = new CategoryDTO(name, description);
-     this.createCategoryUseCase.execute(dto);
-     return response.status(201).send();
+     try{
+      this.createCategoryUseCase.execute(dto);
+      return response.status(201).send();
+     } catch (error) {
+      return response.status(400).json({error: error.message });
+     }
+
    }
 
 }

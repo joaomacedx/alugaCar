@@ -1,9 +1,7 @@
 import fs from "fs";
 import { parse as csvParse } from "csv-parse";
-import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 import { ICategoryDTO } from "../../DataTransferObjects/ICategoryDTO";
 import { CategoryDTO } from "../../DataTransferObjects/CategoryDTO";
-import { ICategoryFactory } from "../../Factories/ICategoryFactory";
 import { CreateCategoryService } from "../../services/CreateCategoryService";
 class ImportCategoryUseCase{
    constructor(
@@ -29,7 +27,10 @@ class ImportCategoryUseCase{
          const[name, description] = line;
          categories.push(new CategoryDTO(name, description));
        }).on("end", ()=> {
+         fs.promises.unlink(file.path);
          resolve(categories);
+       }).on("error",(err)=>{
+         reject(err);
        });
      });
    }

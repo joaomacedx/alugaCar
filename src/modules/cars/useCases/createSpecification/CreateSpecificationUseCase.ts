@@ -9,9 +9,7 @@ class CreateSpecificationUseCase {
    }
    public execute(dto: ISpecificationDTO): void{ 
      const specificationAlreadyExists = this.specificationRepository.findByName(dto);
-     if (specificationAlreadyExists){
-       throw new Error("Specification already exists");
-     }
+     if (specificationAlreadyExists) throw new Error("Specification already exists");
      const specification = this.specificationFactory.build(dto);
      this.specificationRepository.save(specification);
    }
