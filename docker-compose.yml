@@ -1,6 +1,20 @@
 version: "2.17.2"
 
 services:
+  alugacarDB:
+    image: postgres
+    container_name: alugacarDB
+    restart: always
+    ports:
+    - 5432:5432
+    environment:
+      - POSTGRES_USER=alugaCarADM
+      - POSTGRES_PASSWORD=4lug4c4r
+      - POSTGRES_DB=alugaCar
+    volumes:
+      - pgdata:/data/postgres
+    networks: 
+     - alugaCarNetwork
   app:
     build: .
     container_name: alugaCar
@@ -8,3 +22,16 @@ services:
      - 8080:8080
     volumes:
       - .:/usr/app
+    links:
+      - alugacarDB
+    depends_on:
+      - alugacarDB
+    networks:
+      - alugaCarNetwork
+
+volumes:
+  pgdata:
+    driver: local
+networks:
+  alugaCarNetwork:
+    driver: bridge

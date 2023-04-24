@@ -2,11 +2,11 @@ import { DataSource } from "typeorm";
 
 const dataSource  = new DataSource({
   type: "postgres",
-  host: "dataBase",
+  host: "alugacarDB",
   port: 5432,
-  username: "alugaCarDB",
-  password: "",
-  database: "alugaCar",
+  username: "alugaCarADM",
+  password: "4lug4c4r",
+  database: "alugacarDB",
 });
 
 dataSource.initialize();
