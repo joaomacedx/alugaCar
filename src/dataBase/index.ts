@@ -6,7 +6,7 @@ const dataSource  = new DataSource({
   port: 5432,
   username: "alugaCarADM",
   password: "4lug4c4r",
-  database: "alugacarDB",
+  database: "alugaCar",
 });
 
 dataSource.initialize();
