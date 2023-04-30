@@ -1,6 +1,6 @@
 import { CategoryDTO } from "../../DataTransferObjects/CategoryDTO";
 import { ICategoryDTO } from "../../DataTransferObjects/ICategoryDTO";
-import { Category } from "../../model/Category"; 
+import { Category } from "../../entities/Category"; 
 import { ICategoriesRepository } from "../ICategoriesRepository";
 class CategoriesRepository implements ICategoriesRepository {
    private categories : Category[];

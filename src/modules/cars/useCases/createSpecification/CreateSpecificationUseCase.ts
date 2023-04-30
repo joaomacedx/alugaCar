@@ -1,5 +1,5 @@
 import { ISpecificationDTO } from "../../DataTransferObjects/ISpecificationDTO";
-import { ISpecificationFactory } from "../../Factories/ISpecificationFactory";
+import { ISpecificationFactory } from "../../factories/ISpecificationFactory";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
 class CreateSpecificationUseCase {

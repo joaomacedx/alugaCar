@@ -1,5 +1,5 @@
 import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
-import { ICategoryFactory } from "../Factories/ICategoryFactory";
+import { ICategoryFactory } from "../factories/ICategoryFactory";
 import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
 class CreateCategoryService {

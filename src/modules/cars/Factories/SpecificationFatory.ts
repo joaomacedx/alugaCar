@@ -1,5 +1,5 @@
 import { ISpecificationDTO } from "../DataTransferObjects/ISpecificationDTO";
-import { Specification } from "../model/Specification";
+import { Specification } from "../entities/Specification";
 
 class SpecificationFactory{
    public build(dto: ISpecificationDTO): Specification {
