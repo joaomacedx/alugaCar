@@ -7,13 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules  --respawn src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
-    "migration:run": "typeorm -d src/dataBase/index.ts migration:run",
+    "migration:run": "typeorm-ts-node-commonjs migration:run -d ./src/database/index.ts",
+    "migration:revert": "typeorm-ts-node-commonjs migration:revert -d ./src/database/index.ts",
     "migration:create":"cd ./src/dataBase/migrations && typeorm migration:create"
 
   },
-  "keywords": [],
+  "keywords": [], 
   "author": "",
-  "license": "ISC",
+  "license": "ISC", 
   "dependencies": {
     "@types/multer": "^1.4.7",
     "csv-parse": "^5.3.8",
