@@ -1,6 +1,6 @@
 import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
 import { ICategoryFactory } from "../factories/ICategoryFactory";
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../repositories/ICategoriesRepositoryInMemory";
 
 class CreateCategoryService {
    constructor(
