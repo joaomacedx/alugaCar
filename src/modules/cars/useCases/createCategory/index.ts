@@ -1,9 +1,9 @@
 import { CategoryFactory } from "../../factories/CategoryFactory";
-import { CategoriesRepository } from "../../repositories/implementations/InMemoryCategoriesRepository";
+import { CategoriesRepository } from "../../repositories/implementations/typeORMCategoriesRepository";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 import { CreateCategoryController } from "./CreateCategoryController";
 
-const categoriesRepository = CategoriesRepository.getInstance();
+const categoriesRepository = new CategoriesRepository();
 
 const categoriesFactory= new CategoryFactory();
 
