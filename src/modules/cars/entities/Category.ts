@@ -5,7 +5,7 @@ import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 class Category {
    @PrimaryColumn()
     id?: string;
-    
+
     @Column()
     name: string;
 
@@ -16,12 +16,11 @@ class Category {
     created_at: Date;
 
     constructor(_name : string,
-       _description: string,
-       _created_at : Date) {
+       _description: string) {
     if(!this.id) {
        this.id = uuidv4();
     }
-    this.created_at = _created_at;
+
     this.description = _description;
     this.name = _name;
     }
