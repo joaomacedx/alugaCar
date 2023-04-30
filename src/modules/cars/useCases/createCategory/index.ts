@@ -1,5 +1,5 @@
 import { CategoryFactory } from "../../factories/CategoryFactory";
-import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
+import { CategoriesRepository } from "../../repositories/implementations/InMemoryCategoriesRepository";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 import { CreateCategoryController } from "./CreateCategoryController";
 

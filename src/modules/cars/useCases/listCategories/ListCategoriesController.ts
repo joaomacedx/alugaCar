@@ -1,4 +1,4 @@
-import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
+import { CategoriesRepository } from "../../repositories/implementations/InMemoryCategoriesRepository";
 import { Request, Response } from "express";
 
 class ListCategoriesController{

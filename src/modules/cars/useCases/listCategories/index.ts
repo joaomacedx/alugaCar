@@ -1,4 +1,4 @@
-import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
+import { CategoriesRepository } from "../../repositories/implementations/InMemoryCategoriesRepository";
 import { ListCategoriesController } from "./ListCategoriesController";
 
 const categoriesRepository = CategoriesRepository.getInstance();
