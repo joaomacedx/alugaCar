@@ -2,7 +2,7 @@
    "openapi": "3.0.0",
    "info":{
      "title": "AlugaCar Documentation",
-     "description": "This is an API Rent",
+     "description": "This is an API for car rental management",
      "version": "1.0.0",
      "contact":{
        "email": "joaomacedx@gmail.com"
@@ -72,6 +72,46 @@
           }
          }
        }
+    },
+    "/specifications":{
+      "post":{
+        "tags": ["Specifications"],
+        "summary":"Create a Specification",
+        "description":"Create a new Specification",
+        "requestBody":{
+          "content":{
+            "application/json":{
+              "schema":{
+                "$ref": "#/definitions/Specification"
+              }
+            }
+          }
+        },
+        "responses":{
+          "201":{
+            "description": "Created"
+          },
+          "500":{
+            "description": "Specification already exists!"
+          }
+        }
+
+
+      }
+
     }
+   },
+   "definitions": {
+     "Specification":{
+      "type": "object",
+      "properties":{
+        "name":{
+          "type": "string"
+        },
+        "description":{
+          "type": "string"
+        }
+     }
    }
+  }
 }
