@@ -11,11 +11,16 @@ class CreateSpecificationUseCase {
     @inject("SpecificationFactory")
      private specificationFactory: ISpecificationFactory) {
    }
-   public execute(dto: ISpecificationDTO): void{ 
-     const specificationAlreadyExists = this.specificationRepository.findByName(dto);
-     if (specificationAlreadyExists) throw new Error("Specification already exists");
-     const specification = this.specificationFactory.build(dto);
-     this.specificationRepository.save(specification);
+   public async execute(dto: ISpecificationDTO): Promise<void>{ 
+    try{
+      const specificationAlreadyExists = await this.specificationRepository.findByName(dto.name);
+      if (specificationAlreadyExists) throw new Error("Specification already exists");
+      const specification = this.specificationFactory.build(dto);
+      await this.specificationRepository.save(specification);
+    } catch (error) {
+
+    }
+
    }
 }
 

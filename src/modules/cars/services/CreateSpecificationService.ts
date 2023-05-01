@@ -9,7 +9,7 @@ class CreateSpecificationService {
      private specificationFactory: ISpecificationFactory) {
    }
    public execute(dto: ISpecificationDTO): void{ 
-     const specificationAlreadyExists = this.specificationRepository.findByName(dto);
+     const specificationAlreadyExists = this.specificationRepository.findByName(dto.name);
      if (specificationAlreadyExists){
        throw new Error("Specification already exists");
      }

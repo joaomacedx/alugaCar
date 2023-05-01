@@ -4,7 +4,7 @@ import { CategoriesRepository } from "../../modules/cars/repositories/implementa
 import { ICategoryFactory } from "../../modules/cars/factories/ICategoryFactory";
 import { CategoryFactory } from "../../modules/cars/factories/CategoryFactory";
 import { ISpecificationsRepository } from "../../modules/cars/repositories/ISpecificationsRepository";
-import { SpecificationsRepository } from "../../modules/cars/repositories/implementations/SpecificationsRepository";
+import { SpecificationsRepository } from "../../modules/cars/repositories/implementations/typeORMSpecificationsRepository";
 import { ISpecificationFactory } from "../../modules/cars/factories/ISpecificationFactory";
 import { SpecificationFactory } from "../../modules/cars/factories/SpecificationFatory";
 

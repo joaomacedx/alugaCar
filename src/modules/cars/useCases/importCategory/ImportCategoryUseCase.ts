@@ -23,7 +23,7 @@ class ImportCategoryUseCase{
           let categoryAlreadyExists = await this.categoriesRepository.findByName(element.name);
           if(categoryAlreadyExists) throw new Error("Category already exists, unable to proceed with the transaction");
           let newCategoryToImport = this.categoryFactory.build(element);
-          this.categoriesRepository.save(newCategoryToImport);
+         await this.categoriesRepository.save(newCategoryToImport);
        }
    }
    
