@@ -1,10 +1,14 @@
+import { inject, injectable } from "tsyringe";
 import { ICategoryDTO } from "../../DataTransferObjects/ICategoryDTO";
 import { ICategoryFactory } from "../../factories/ICategoryFactory";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
+@injectable()
 class CreateCategoryUseCase {
    constructor(
+    @inject("CategoriesRepository")
      private categoriesRepository: ICategoriesRepository,
+    @inject("CategoryFactory")
      private categoriesFactory: ICategoryFactory) {
    }
    public async execute(dto: ICategoryDTO): Promise<void>{ 
