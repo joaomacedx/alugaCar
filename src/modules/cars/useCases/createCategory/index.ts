@@ -3,12 +3,16 @@ import { CategoriesRepository } from "../../repositories/implementations/typeORM
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 import { CreateCategoryController } from "./CreateCategoryController";
 
-const categoriesRepository = new CategoriesRepository();
-
-const categoriesFactory= new CategoryFactory();
-
-const createCategoryUseCase =  new CreateCategoryUseCase(categoriesRepository,categoriesFactory );
-
-const createCategoryController = new CreateCategoryController(createCategoryUseCase);
-
-export { createCategoryController }
+export default (): CreateCategoryController => {
+  const categoriesRepository = new CategoriesRepository();
+  const categoriesFactory= new CategoryFactory();
+  const createCategoryUseCase =  new CreateCategoryUseCase(
+    categoriesRepository,
+    categoriesFactory,
+  );
+  const createCategoryController = new CreateCategoryController(
+    createCategoryUseCase,
+  );
+  
+  return createCategoryController;
+};

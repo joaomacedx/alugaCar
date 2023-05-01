@@ -7,8 +7,8 @@ class CreateCategoryUseCase {
      private categoriesRepository: ICategoriesRepository,
      private categoriesFactory: ICategoryFactory) {
    }
-   public execute(dto: ICategoryDTO): void{ 
-     const categoryAlreadyExists = this.categoriesRepository.findByName(dto.name);
+   public async execute(dto: ICategoryDTO): Promise<void>{ 
+     const categoryAlreadyExists = await this.categoriesRepository.findByName(dto.name);
      if (categoryAlreadyExists) throw new Error("Category already exists");
      const category = this.categoriesFactory.build(dto);
      this.categoriesRepository.save(category);
