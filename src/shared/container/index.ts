@@ -3,6 +3,10 @@ import { ICategoriesRepository } from "../../modules/cars/repositories/ICategori
 import { CategoriesRepository } from "../../modules/cars/repositories/implementations/typeORMCategoriesRepository";
 import { ICategoryFactory } from "../../modules/cars/factories/ICategoryFactory";
 import { CategoryFactory } from "../../modules/cars/factories/CategoryFactory";
+import { ISpecificationsRepository } from "../../modules/cars/repositories/ISpecificationsRepository";
+import { SpecificationsRepository } from "../../modules/cars/repositories/implementations/SpecificationsRepository";
+import { ISpecificationFactory } from "../../modules/cars/factories/ISpecificationFactory";
+import { SpecificationFactory } from "../../modules/cars/factories/SpecificationFatory";
 
 container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository",
@@ -12,3 +16,11 @@ container.registerSingleton<ICategoryFactory>(
     "CategoryFactory",
     CategoryFactory,
 );
+container.registerSingleton<ISpecificationsRepository>(
+    "SpecificationsRepository",
+    SpecificationsRepository,
+);
+container.registerSingleton<ISpecificationFactory>(
+    "SpecificationFactory",
+    SpecificationFactory,
+)

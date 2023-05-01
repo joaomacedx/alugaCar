@@ -1,10 +1,14 @@
+import { inject, injectable } from "tsyringe";
 import { ISpecificationDTO } from "../../DataTransferObjects/ISpecificationDTO";
 import { ISpecificationFactory } from "../../factories/ISpecificationFactory";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
+@injectable()
 class CreateSpecificationUseCase {
    constructor(
+    @inject("SpecificationsRepository")
      private specificationRepository: ISpecificationsRepository,
+    @inject("SpecificationFactory")
      private specificationFactory: ISpecificationFactory) {
    }
    public execute(dto: ISpecificationDTO): void{ 
