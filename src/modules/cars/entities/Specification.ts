@@ -22,8 +22,6 @@ class Specification{
      this.description = description;
      this.name = name;
    }
-   
-
 }
 
 export { Specification }

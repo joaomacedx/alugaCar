@@ -15,10 +15,10 @@ class CreateSpecificationUseCase {
     try{
       const specificationAlreadyExists = await this.specificationRepository.findByName(dto.name);
       if (specificationAlreadyExists) throw new Error("Specification already exists");
-      const specification = this.specificationFactory.build(dto);
-      await this.specificationRepository.save(specification);
+      const newSpecification = this.specificationFactory.build(dto);
+      await this.specificationRepository.save(newSpecification);
     } catch (error) {
-
+      console.log({ error: error.message });
     }
 
    }
