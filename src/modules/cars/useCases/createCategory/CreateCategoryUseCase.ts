@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 import { ICategoryDTO } from "../../DataTransferObjects/ICategoryDTO";
-import { ICategoryFactory } from "../../factories/ICategoryFactory";
+import { ICategoryFactory } from "../../Factories/ICategoryFactory";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 @injectable()
