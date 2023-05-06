@@ -1,5 +1,5 @@
 import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
-import { Category } from "../model/Category";
+import { Category } from "../entities/Category";
 
  interface ICategoryFactory{
    build(dto: ICategoryDTO) : Category;

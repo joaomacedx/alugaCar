@@ -1,5 +1,5 @@
 import { ISpecificationDTO } from "../DataTransferObjects/ISpecificationDTO";
-import { ISpecificationFactory } from "../Factories/ISpecificationFactory";
+import { ISpecificationFactory } from "../factories/ISpecificationFactory";
 import { ISpecificationsRepository } from "../repositories/ISpecificationsRepository";
 
 
@@ -9,7 +9,7 @@ class CreateSpecificationService {
      private specificationFactory: ISpecificationFactory) {
    }
    public execute(dto: ISpecificationDTO): void{ 
-     const specificationAlreadyExists = this.specificationRepository.findByName(dto);
+     const specificationAlreadyExists = this.specificationRepository.findByName(dto.name);
      if (specificationAlreadyExists){
        throw new Error("Specification already exists");
      }

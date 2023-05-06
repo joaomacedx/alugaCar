@@ -1,11 +1,9 @@
-import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
-import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
-import { Category } from "../model/Category";
+import { Category } from "../entities/Category";
 
  interface ICategoriesRepository{
-   findByName(dto: ICategoryDTO) : CategoryDTO;
-   list(): CategoryDTO[];
-   save(category: Category): void;
+   findByName(name: string) : Promise<Category>;
+   list(): Promise<Category[]>;
+   save(category: Category): Promise<void>;
  }
 
- export { ICategoriesRepository }
+ export { ICategoriesRepository as ICategoriesRepository }

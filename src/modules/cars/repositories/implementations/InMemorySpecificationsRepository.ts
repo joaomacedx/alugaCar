@@ -1,14 +1,14 @@
 import { ISpecificationDTO } from "../../DataTransferObjects/ISpecificationDTO";
 import { SpecificationDTO } from "../../DataTransferObjects/SpecificationDTO";
-import { Specification } from "../../model/Specification";
-import { ISpecificationsRepository } from "../ISpecificationsRepository";
+import { Specification } from "../../entities/Specification";
+import { ISpecificationsRepository } from "../ISpecificationsRepositoryInMemory";
 
 class SpecificationsRepository implements ISpecificationsRepository{
    private specifications: Specification[];
 
    private static INSTANCE: SpecificationsRepository;
    
-   private constructor(){
+   constructor(){
      this.specifications = [];
    }
 

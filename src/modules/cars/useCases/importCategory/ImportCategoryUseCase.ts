@@ -2,17 +2,28 @@ import fs from "fs";
 import { parse as csvParse } from "csv-parse";
 import { ICategoryDTO } from "../../DataTransferObjects/ICategoryDTO";
 import { CategoryDTO } from "../../DataTransferObjects/CategoryDTO";
-import { CreateCategoryService } from "../../services/CreateCategoryService";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
+import { inject, injectable } from "tsyringe";
+import { ICategoryFactory } from "../../factories/ICategoryFactory";
+
+@injectable()
 class ImportCategoryUseCase{
    constructor(
-     private createCategoryService: CreateCategoryService
+    @inject("CategoriesRepository")
+     private categoriesRepository: ICategoriesRepository,
+    @inject("CategoryFactory")
+     private categoryFactory: ICategoryFactory,
+
    ){}
 
    public async execute(file: Express.Multer.File): Promise<void> {
      const categories = await this.loadCategories(file);
      for (let index = 0; index < categories.length; index++) {
          let element = categories[index];
-         this.createCategoryService.execute(element);
+          let categoryAlreadyExists = await this.categoriesRepository.findByName(element.name);
+          if(categoryAlreadyExists) throw new Error("Category already exists, unable to proceed with the transaction");
+          let newCategoryToImport = this.categoryFactory.build(element);
+         await this.categoriesRepository.save(newCategoryToImport);
        }
    }
    
