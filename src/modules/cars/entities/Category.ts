@@ -15,15 +15,15 @@ class Category {
    @CreateDateColumn()
    created_at: Date;
 
-   constructor(_name : string,
-   _description: string,
+   constructor(name : string,
+      description: string,
    ) {
       if(!this.id) {
       this.id = uuidv4();
    }
 
-   this.description = _description;
-   this.name = _name;
+   this.description = description;
+   this.name = name;
    }
 }
 

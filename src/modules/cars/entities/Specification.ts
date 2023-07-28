@@ -4,11 +4,11 @@ import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 @Entity("specifications")
 class Specification{
   @PrimaryColumn()
-   id?: string;
+  id?: string;
   @Column()
-   name: string;
+  name: string;
   @Column()
-   description: string;
+  description: string;
   @CreateDateColumn()
   created_at: Date;
 
