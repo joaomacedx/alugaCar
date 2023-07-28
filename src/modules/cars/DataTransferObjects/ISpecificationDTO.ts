@@ -1,8 +1,6 @@
 interface ISpecificationDTO{
-   name: string;
-   description: string; 
- }
- export { ISpecificationDTO }
+  name: string;
+  description: string; 
+}
+export { ISpecificationDTO }
   
-  
- 

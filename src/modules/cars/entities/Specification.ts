@@ -10,18 +10,18 @@ class Specification{
   @Column()
    description: string;
   @CreateDateColumn()
-   created_at: Date;
+  created_at: Date;
 
-   constructor(
+  constructor(
       name : string, 
-     description: string,
-     ) {
-     if(!this.id) {
-       this.id = uuidV4();
-     }
-     this.description = description;
-     this.name = name;
-   }
+    description: string,
+    ) {
+    if(!this.id) {
+      this.id = uuidV4();
+    }
+    this.description = description;
+    this.name = name;
+  }
 }
 
 export { Specification }

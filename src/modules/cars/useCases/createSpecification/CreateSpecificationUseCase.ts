@@ -5,13 +5,14 @@ import { ISpecificationsRepository } from "../../repositories/ISpecificationsRep
 
 @injectable()
 class CreateSpecificationUseCase {
-   constructor(
+  constructor(
     @inject("SpecificationsRepository")
-     private specificationRepository: ISpecificationsRepository,
+    private specificationRepository: ISpecificationsRepository,
+
     @inject("SpecificationFactory")
-     private specificationFactory: ISpecificationFactory) {
-   }
-   public async execute(dto: ISpecificationDTO): Promise<void>{ 
+    private specificationFactory: ISpecificationFactory) {
+  }
+  public async execute(dto: ISpecificationDTO): Promise<void>{ 
     try{
       const specificationAlreadyExists = await this.specificationRepository.findByName(dto.name);
       if (specificationAlreadyExists) throw new Error("Specification already exists");
@@ -20,8 +21,6 @@ class CreateSpecificationUseCase {
     } catch (error) {
       console.log({ error: error.message });
     }
-
-   }
+  }
 }
-
 export { CreateSpecificationUseCase }

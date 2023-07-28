@@ -1,14 +1,14 @@
 {
-   "openapi": "3.0.0",
-   "info":{
-     "title": "AlugaCar Documentation",
-     "description": "This is an API for car rental management",
-     "version": "1.0.0",
-     "contact":{
-       "email": "joaomacedx@gmail.com"
-     }
-   },
-   "paths":{
+  "openapi": "3.0.0",
+  "info":{
+    "title": "AlugaCar Documentation",
+    "description": "This is an API for car rental management",
+    "version": "1.0.0",
+    "contact":{
+    "email": "joaomacedx@gmail.com"
+    }
+  },
+  "paths":{
     "/categories":{
       "post":{
          "tags":["Category"],
@@ -127,9 +127,9 @@
       }
 
     }
-   },
-   "definitions": {
-     "Specification":{
+  },
+  "definitions": {
+    "Specification":{
       "type": "object",
       "properties":{
         "name":{
@@ -138,7 +138,7 @@
         "description":{
           "type": "string"
         }
-     }
-   }
+    }
+  }
   }
 }

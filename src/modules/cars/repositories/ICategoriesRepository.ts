@@ -1,9 +1,9 @@
 import { Category } from "../entities/Category";
 
- interface ICategoriesRepository{
-   findByName(name: string) : Promise<Category>;
-   list(): Promise<Category[]>;
-   save(category: Category): Promise<void>;
- }
+interface ICategoriesRepository{
+  findByName(name: string) : Promise<Category>;
+  list(): Promise<Category[]>;
+  save(category: Category): Promise<void>;
+}
+export { ICategoriesRepository as ICategoriesRepository }
 
- export { ICategoriesRepository as ICategoriesRepository }

@@ -4,18 +4,18 @@ import { Request, Response } from "express";
 import { CategoryDTO } from "../../DataTransferObjects/CategoryDTO";
 
 class CreateCategoryController{
-   public handle(request: Request, response: Response): Response {
-     const { name, description } = request.body;
-     const dto = new CategoryDTO(name, description);
-     try{
+  public handle(request: Request, response: Response): Response {
+    const { name, description } = request.body;
+    const dto = new CategoryDTO(name, description);
+    try{
       const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
       createCategoryUseCase.execute(dto);
       return response.status(201).send();
-     } catch (error) {
+    } catch (error) {
       return response.status(400).json({error: error.message });
-     }
+    }
 
-   }
+  }
 
 }
 

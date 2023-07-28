@@ -6,14 +6,15 @@ import { Category } from "../../entities/Category";
 
 @injectable()
 class ListCategoriesUseCase{
-   constructor(
+  constructor(
     @inject("CategoriesRepository")
-     private categoriesRepository: ICategoriesRepository
-   ){}
-   public  async execute(): Promise<Category[]> {
-     const all = await this.categoriesRepository.list();
-     return all;
-   }
+    private categoriesRepository: ICategoriesRepository
+  ){}
+  public  async execute(): Promise<Category[]> {
+    const all = await this.categoriesRepository.list();
+    return all;
+  }
 }
 export { ListCategoriesUseCase }
+
 
