@@ -1,5 +1,5 @@
-import { CategoryDTO } from "../DataTransferObjects/CategoryDTO";
-import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
+import { CategoryDTO } from "../dto/CategoryDTO";
+import { ICategoryDTO } from "../dto/ICategoryDTO";
 import { Category } from "../entities/Category";
 
 interface ICategoriesRepositoryInMemory{

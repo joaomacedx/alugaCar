@@ -1,4 +1,4 @@
-import { ICategoryDTO } from "../DataTransferObjects/ICategoryDTO";
+import { ICategoryDTO } from "../dto/ICategoryDTO";
 import { Category } from "../entities/Category";
 
 interface ICategoryFactory{

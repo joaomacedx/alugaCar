@@ -1,7 +1,7 @@
 import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase";
 import { container  } from "tsyringe";
 import { Request, Response } from "express";
-import { SpecificationDTO } from "../../DataTransferObjects/SpecificationDTO";
+import { SpecificationDTO } from "../../dto/SpecificationDTO";
 
 class CreateSpecificationController {
   public async handle(request: Request, response: Response): Promise<Response> {

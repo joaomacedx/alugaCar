@@ -1,4 +1,4 @@
-import { ISpecificationDTO } from "../DataTransferObjects/ISpecificationDTO";
+import { ISpecificationDTO } from "../dto/ISpecificationDTO";
 import { Specification } from "../entities/Specification";
 
 interface ISpecificationFactory{

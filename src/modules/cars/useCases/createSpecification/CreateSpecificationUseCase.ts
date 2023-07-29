@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { ISpecificationDTO } from "../../DataTransferObjects/ISpecificationDTO";
+import { ISpecificationDTO } from "../../dto/ISpecificationDTO";
 import { ISpecificationFactory } from "../../factories/ISpecificationFactory";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
