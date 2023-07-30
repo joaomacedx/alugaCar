@@ -28,10 +28,20 @@ class User {
     created_at: Date;
 
 
-    constructor() {
-        if(!this.id) {
-            this.id = uuidV4();
-        }
+    constructor(name: string,
+        username: string,
+        email: string,
+        password: string,
+        driver_license: string,
+        ) {
+            if(!this.id) {
+                this.id = uuidV4();
+            }
+            this.name = name;
+            this.username = username;
+            this.email = email;
+            this.password = password;
+            this.driver_license = driver_license;
         
     }
 }
