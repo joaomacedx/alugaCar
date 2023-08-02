@@ -7,20 +7,37 @@ import { ISpecificationsRepository } from "../../modules/cars/repositories/ISpec
 import { SpecificationsRepository } from "../../modules/cars/repositories/implementations/TypeORMSpecificationsRepository";
 import { ISpecificationFactory } from "../../modules/cars/factories/ISpecificationFactory";
 import { SpecificationFactory } from "../../modules/cars/factories/implementations/SpecificationFatory";
+import { IUsersRepository } from "../../modules/accounts/repositories/IUsersRepository";
+import { UsersRepository } from "../../modules/accounts/repositories/implementations/TypeORMUsersRepository";
+import { IUserFactory } from "../../modules/accounts/factories/IUserFactory";
+import { UserFactory } from "../../modules/accounts/factories/implementations/UserFactory";
 
-container.registerSingleton<ICategoriesRepository>(
+  container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository",
     CategoriesRepository,
 );
-container.registerSingleton<ICategoryFactory>(
+  container.registerSingleton<ICategoryFactory>(
     "CategoryFactory",
     CategoryFactory,
 );
-container.registerSingleton<ISpecificationsRepository>(
+
+  container.registerSingleton<ISpecificationsRepository>(
     "SpecificationsRepository",
     SpecificationsRepository,
 );
-container.registerSingleton<ISpecificationFactory>(
+
+  container.registerSingleton<ISpecificationFactory>(
     "SpecificationFactory",
     SpecificationFactory,
+);
+
+  container.registerSingleton<IUsersRepository>(
+    "UsersRepository",
+    UsersRepository,
+);
+
+  container.registerSingleton<IUserFactory>(
+    "UserFactory",
+    UserFactory,
 )
+
