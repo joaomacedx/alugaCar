@@ -9,3 +9,4 @@ class UserFactory implements IUserFactory {
     }
 
 }
+export { UserFactory }
