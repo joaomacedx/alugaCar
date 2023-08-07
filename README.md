@@ -50,7 +50,10 @@ alugaCar/
 - Docker
 - Docker-Compose
 
-       - Optei por tecnologias poderosas para implementar o projeto AlugaCar, visando eficiência e escalabilidade. O projeto está sendo desenvolvido principalmente em TypeScript, uma linguagem que combina tipagem estática e funcionalidades modernas. O framework Node.js em conjunto com Express oferece uma base sólida para o desenvolvimento de APIs robustas e de alto desempenho. O banco de dados PostgreSQL foi escolhido devido à sua confiabilidade e capacidade de lidar com grandes volumes de dados de forma eficaz. O TypeORM permite código independente do banco de dados, com suporte direto a TypeScript e flexibilidade para trocar bancos facilmente, além de Migrations Automáticas o que  facilita a atualização e versionamento do banco de dados baseado em mudanças no código, e é compatível com diversos bancos de dados SQL e NoSQL. O tsyringe promove código desacoplado, facilitando testes e manutenção, Decorators Intuitivos que tornam o registro e a resolução de dependências mais limpos e claros, além de adicionar mínima sobrecarga ao projeto, mantendo a performance.
+  - Optei por tecnologias poderosas para implementar o projeto AlugaCar, visando eficiência e escalabilidade. O projeto está sendo desenvolvido principalmente em TypeScript, uma linguagem que combina tipagem estática e funcionalidades modernas.
+  - O framework Node.js em conjunto com Express oferece uma base sólida para o desenvolvimento de APIs robustas e de alto desempenho. O banco de dados PostgreSQL foi escolhido devido à sua confiabilidade e capacidade de lidar com grandes volumes de dados de forma eficaz.
+  - O TypeORM permite código independente do banco de dados, com suporte direto a TypeScript e flexibilidade para trocar bancos facilmente, além de Migrations Automáticas o que  facilita a atualização e versionamento do banco de dados baseado em mudanças no código, e é compatível com diversos bancos de dados SQL e NoSQL.
+  - O tsyringe promove código desacoplado, facilitando testes e manutenção, Decorators Intuitivos que tornam o registro e a resolução de dependências mais limpos e claros, além de adicionar mínima sobrecarga ao projeto, mantendo a performance.
 
 ## Contribua!
 
