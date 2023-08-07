@@ -55,10 +55,6 @@ alugaCar/
   - O TypeORM permite código independente do banco de dados, com suporte direto a TypeScript e flexibilidade para trocar bancos facilmente, além de Migrations Automáticas o que  facilita a atualização e versionamento do banco de dados baseado em mudanças no código, e é compatível com diversos bancos de dados SQL e NoSQL.
   - O tsyringe promove código desacoplado, facilitando testes e manutenção, Decorators Intuitivos que tornam o registro e a resolução de dependências mais limpos e claros, além de adicionar mínima sobrecarga ao projeto, mantendo a performance.
 
-## Contribua!
-
-Convido você a explorar a estrutura detalhada do projeto AlugaCar visitando o [repositório oficial no GitHub](https://github.com/joaomacedx/alugacar). Lá, você encontrará informações abrangentes sobre a implementação, a arquitetura e os padrões de design utilizados. A [Wiki oficial no GitHub](https://github.com/joaomacedx/alugaCar/wiki) do projeto oferece uma visão mais profunda e pode ser um ótimo ponto de partida para entender as regras para contribuição. Além disso, incentivamos e damos as boas-vindas a contribuições que possam enriquecer e expandir as funcionalidades do AlugaCar.
-
 
 ## 🚀 How to run 🚀
 
@@ -92,6 +88,10 @@ $ docker-compose up
 
 http://localhost:8080/api-docs
 ```
+
+## Contribua!
+
+Convido você a explorar a estrutura detalhada do projeto AlugaCar visitando o [repositório oficial no GitHub](https://github.com/joaomacedx/alugacar). Lá, você encontrará informações abrangentes sobre a implementação, a arquitetura e os padrões de design utilizados. A [Wiki oficial no GitHub](https://github.com/joaomacedx/alugaCar/wiki) do projeto oferece uma visão mais profunda e pode ser um ótimo ponto de partida para entender as regras para contribuição. Além disso, incentivamos e damos as boas-vindas a contribuições que possam enriquecer e expandir as funcionalidades do AlugaCar.
 
 **Equipe AlugaCar**
 - - 📫 You can reach me at <a href="mailto:joaomacedx@gmail.com">joaomacedx@gmail.com</a><br>
