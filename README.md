@@ -9,7 +9,7 @@ O **AlugaCar** é uma aplicação sofisticada projetada para simplificar o proce
 
 ## Princípios de Design e Arquitetura:
 
-Durante o desenvolvimento do AlugaCar, aplicamos os princípios **SOLID**, que são fundamentais para a criação de software robusto e escalável. Utilizamos referências da Clean Architecture para estruturar o projeto de maneira coerente. Isso resultou em uma arquitetura onde cada componente possui responsabilidades claramente definidas, promovendo a coesão e a legibilidade do código. Alguns **Design Patterns** foram adotados, como **Factory**, **Repository**, **Singleton** e **Data Transfer Object**, aprimorando a reutilização de unidades e organização do código.
+Durante o desenvolvimento do AlugaCar, aplicamos os princípios **SOLID**, que são fundamentais para a criação de software robusto e escalável. Utilizei referências da Clean Architecture para estruturar o projeto de maneira coerente. Isso resultou em uma arquitetura onde cada componente possui responsabilidades claramente definidas, promovendo a coesão e a legibilidade do código. Alguns **Design Patterns** foram adotados, como **Factory**, **Repository**, **Singleton** e **Data Transfer Object**, aprimorando a reutilização de unidades e organização do código.
 ## Estrutura do Projeto:
 ```
 alugaCar/
