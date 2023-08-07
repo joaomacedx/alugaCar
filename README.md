@@ -5,7 +5,7 @@
   <img alt="Made by João Macêdo" src="https://img.shields.io/badge/made%20by-João%20Macêdo-blue">
  </div>
  
-O **AlugaCar** é uma aplicação sofisticada projetada para simplificar o processo de gerenciamento de aluguel de carros. Este projeto está sendp desenvolvido com um foco claro na adoção de princípios sólidos de engenharia de software e em uma arquitetura bem definida, inspirada nas diretrizes da **Clean Architecture** de do Clean Code. Essas escolhas estratégicas garantem a modularidade, flexibilidade e facilidade de manutenção do código, promovendo uma separação eficaz entre a lógica de negócios, a camada de interface e a infraestrutura.
+O **AlugaCar** é uma aplicação sofisticada projetada para simplificar o processo de gerenciamento de aluguel de carros. Este projeto está sendodesenvolvido com um foco claro na adoção de princípios sólidos de engenharia de software e em uma arquitetura bem definida, inspirada nas diretrizes da **Clean Architecture** de do Clean Code. Essas escolhas estratégicas garantem a modularidade, flexibilidade e facilidade de manutenção do código, promovendo uma separação eficaz entre a lógica de negócios, a camada de interface e a infraestrutura.
 
 ## Princípios de Design e Arquitetura:
 
