@@ -2,7 +2,7 @@
 
 <div align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joaomacedx/alugaCar?style=flat" >
-  <img alt="Made by João Macêdo" src="https://img.shields.io/badge/made%20by-João%20Macêdo-yellow">
+  <img alt="Made by João Macêdo" src="https://img.shields.io/badge/made%20by-João%20Macêdo-blue">
  </div>
 O **AlugaCar** é uma aplicação sofisticada projetada para simplificar o processo de gerenciamento de aluguel de carros. Este projeto foi desenvolvido com um foco claro na adoção de princípios sólidos de engenharia de software e em uma arquitetura bem definida, inspirada nas diretrizes da **Clean Architecture**. Essas escolhas estratégicas garantem a modularidade, flexibilidade e facilidade de manutenção do código, promovendo uma separação eficaz entre a lógica de negócios, a camada de interface e a infraestrutura.
 
