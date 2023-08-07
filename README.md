@@ -65,7 +65,7 @@ Convido você a explorar a estrutura detalhada do projeto AlugaCar visitando o [
   ```bash
 # After starting the server, go to:
 
-http://localhost:3333/api-docs
+http://localhost:8080/api-docs
 ```
 
 ## 🚀 How to run 🚀
