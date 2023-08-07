@@ -56,5 +56,32 @@ alugaCar/
 
 Convido você a explorar a estrutura detalhada do projeto AlugaCar visitando o [repositório oficial no GitHub](https://github.com/joaomacedx/alugacar). Lá, você encontrará informações abrangentes sobre a implementação, a arquitetura e os padrões de design utilizados. A [Wiki oficial no GitHub](https://github.com/joaomacedx/alugaCar/wiki) do projeto oferece uma visão mais profunda e pode ser um ótimo ponto de partida para entender as regras para contribuição. Além disso, incentivamos e damos as boas-vindas a contribuições que possam enriquecer e expandir as funcionalidades do AlugaCar.
 
+
+## 📚 Docs 📚
+
+  ```bash
+# After starting the server, go to:
+
+http://localhost:3333/api-docs
+```
+
+## 🚀 How to run 🚀
+
+Clone the project and access its folder.
+
+```bash
+$ git clone https://github.com/joaomacedx/alugaCar.git
+$ cd alugaCar
+```
+
+To start it, follow the steps below:
+```bash
+# Install the dependencies
+$ npm i 
+
+# Start the server
+$ docker-compose up
+```
+
 **Equipe AlugaCar**
 - - 📫 You can reach me at <a href="mailto:joaomacedx@gmail.com">joaomacedx@gmail.com</a><br>
