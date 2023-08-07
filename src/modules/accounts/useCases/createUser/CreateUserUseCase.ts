@@ -1,8 +1,9 @@
-import { inject } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { IUserFactory } from "../../factories/IUserFactory";
 import { IUserDTO } from "../../dto/IUserDTO";
 
+@injectable()
 class CreateUserUseCase {
     constructor(
         @inject("UsersRepository")
@@ -16,3 +17,4 @@ class CreateUserUseCase {
             await this.usersRepository.save(newUser);
         }
 }
+export { CreateUserUseCase }

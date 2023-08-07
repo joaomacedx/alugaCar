@@ -19,4 +19,5 @@ class UserDTO implements IUserDTO {
             this.driver_license = driver_license;
     }
 }
+export { UserDTO }
 
