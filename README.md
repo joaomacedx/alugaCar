@@ -1,7 +1,7 @@
 # AlugaCar - Gerenciamento de Aluguel de Carros
 
 <div align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joaomacedx/alugaCar?style=flat" >
+  <img alt="AlugaCar - LOGO" src="../alugaCar/assets/alugaCarLogo.jpg" >
  </div>
 <div align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joaomacedx/alugaCar?style=flat" >
