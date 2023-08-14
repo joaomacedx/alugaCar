@@ -84,6 +84,11 @@ $ npm i
 $ docker-compose up
 ```
 
+```bash
+# Execute as migrations
+  npm run migration:run
+```
+
 ## 📚 Docs 📚
 
   ```bash
