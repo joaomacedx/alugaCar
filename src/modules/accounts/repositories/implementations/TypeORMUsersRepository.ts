@@ -10,9 +10,17 @@ class UsersRepository implements IUsersRepository {
         this.repository = dataSource.getRepository(User);
         
     }
+
     public async save(userToSave: User): Promise<void> {
         await this.repository.save(userToSave);
     }
-    
+    public async findByEmail(email: string): Promise<User> {
+        const userFound = await this.repository.findOne({
+            where: {
+                email: email,
+            },
+        });
+        return userFound;
+    }
 }
 export { UsersRepository }

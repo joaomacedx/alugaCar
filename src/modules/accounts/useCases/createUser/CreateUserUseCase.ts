@@ -13,6 +13,9 @@ class CreateUserUseCase {
         ) {}
 
         public async execute(data: IUserDTO) {
+            const userAlreadyExists = await this.usersRepository.findByEmail(data.email);
+            if (userAlreadyExists)  
+                throw new Error("User already exists");
             const newUser = this.userFactory.build(data);
             await this.usersRepository.save(newUser);
         }
