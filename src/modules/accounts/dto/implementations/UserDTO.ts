@@ -1,4 +1,4 @@
-import { IUserDTO } from "./IUserDTO";
+import { IUserDTO } from "../IUserDTO";
 
 class UserDTO implements IUserDTO {
     name: string;

@@ -1,7 +1,7 @@
 import fs from "fs";
 import { parse as csvParse } from "csv-parse";
 import { ICategoryDTO } from "../../dto/ICategoryDTO";
-import { CategoryDTO } from "../../dto/CategoryDTO";
+import { CategoryDTO } from "../../dto/implementations/CategoryDTO";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 import * as ICategoryFactory from "../../factories/ICategoryFactory";

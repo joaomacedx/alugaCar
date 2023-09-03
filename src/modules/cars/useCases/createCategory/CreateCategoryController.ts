@@ -1,7 +1,7 @@
 import { container } from "tsyringe";
 import { CreateCategoryUseCase} from "./CreateCategoryUseCase";
 import { Request, Response } from "express";
-import { CategoryDTO } from "../../dto/CategoryDTO";
+import { CategoryDTO } from "../../dto/implementations/CategoryDTO";
 
 class CreateCategoryController{
   public handle(request: Request, response: Response): Response {

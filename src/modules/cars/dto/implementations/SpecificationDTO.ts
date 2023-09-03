@@ -1,15 +1,15 @@
-import { ISpecificationDTO } from "./ISpecificationDTO";
+import { ISpecificationDTO } from "../ISpecificationDTO";
 
 class SpecificationDTO implements ISpecificationDTO {
   public name: string; 
   public description: string;
 
   constructor(
-    _name: string,
-    _description: string,
+    name: string,
+    description: string,
     ) {
-      this.name = _name;
-      this.description = _description;
+      this.name = name;
+      this.description = description;
   }
 }
 
