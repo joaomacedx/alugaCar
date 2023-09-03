@@ -4,23 +4,36 @@ import { IUsersRepository } from "../IUsersRepository";
 import dataSource from "../../../../dataBase";
 
 class UsersRepository implements IUsersRepository {
-    private repository: Repository<User>
+  private repository: Repository<User>
 
-    constructor() {
-        this.repository = dataSource.getRepository(User);
+  constructor() {
+    this.repository = dataSource.getRepository(User);
         
+  }
+
+  public async save(userToSave: User): Promise<void> {
+    await this.repository.save(userToSave);
+  }
+
+  public async findByEmail(email: string): Promise<User> {
+    const userFound = await this.repository.findOne({
+      where: {
+        email: email,
+      },
+    });
+
+    return userFound;
     }
 
-    public async save(userToSave: User): Promise<void> {
-        await this.repository.save(userToSave);
+    public async findById(id: string): Promise<User> {
+      const userFound = await this.repository.findOne({
+        where: {
+          id: id,
+        },
+      });
+
+      return userFound;
     }
-    public async findByEmail(email: string): Promise<User> {
-        const userFound = await this.repository.findOne({
-            where: {
-                email: email,
-            },
-        });
-        return userFound;
-    }
+
 }
 export { UsersRepository }
