@@ -13,7 +13,7 @@
     "plugins": ["prettier", "@typescript-eslint"],
     "rules": {
       "camelcase": "off",
-       "@typescript-eslint/name-convention":[
+      "@typescript-eslint/name-convention":[
         "error",
         {
           "selector": "interface",
