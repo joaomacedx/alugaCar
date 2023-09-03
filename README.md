@@ -102,4 +102,4 @@ http://localhost:8080/api-docs
 Convido você a explorar a estrutura detalhada do projeto AlugaCar visitando o [repositório oficial no GitHub](https://github.com/joaomacedx/alugacar). Lá, você encontrará informações abrangentes sobre a implementação, a arquitetura e os padrões de design utilizados. A [Wiki oficial no GitHub](https://github.com/joaomacedx/alugaCar/wiki) do projeto oferece uma visão mais profunda e pode ser um ótimo ponto de partida para entender as regras para contribuição. Além disso, incentivamos e damos as boas-vindas a contribuições que possam enriquecer e expandir as funcionalidades do AlugaCar.
 
 **Equipe AlugaCar**
-- - 📫 You can reach me at <a href="mailto:joaomacedx@gmail.com">joaomacedx@gmail.com</a><br>
+  - 📫 You can reach me at <a href="mailto:joaomacedx@gmail.com">joaomacedx@gmail.com</a><br>
