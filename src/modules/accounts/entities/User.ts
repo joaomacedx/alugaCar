@@ -3,40 +3,40 @@ import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity("users")
 class User {
-    @PrimaryColumn()
-    id: string;
+  @PrimaryColumn()
+  id: string;
 
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @Column()
-    email: string;
+  @Column()
+  email: string;
 
-    @Column()
-    password: string;
+  @Column()
+  password: string;
 
-    @Column()
-    driver_license: string;
+  @Column()
+  driver_license: string;
 
-    @Column()
-    isAdmin: boolean;
+  @Column()
+  isAdmin: boolean;
 
-    @CreateDateColumn()
-    created_at: Date;
+  @CreateDateColumn()
+  created_at: Date;
 
 
-    constructor(name: string,
-        email: string,
-        password: string,
-        driver_license: string,
-        ) {
-            if(!this.id) {
-                this.id = uuidV4();
-            }
-            this.name = name;
-            this.email = email;
-            this.password = password;
-            this.driver_license = driver_license;  
+  constructor(name: string,
+    email: string,
+    password: string,
+    driver_license: string,
+  ) {
+    if(!this.id) {
+      this.id = uuidV4();
+    }
+    this.email = email;
+    this.name = name;
+    this.password = password;
+    this.driver_license = driver_license;  
     }
 }
 

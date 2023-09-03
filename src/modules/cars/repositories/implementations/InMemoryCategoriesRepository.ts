@@ -1,4 +1,4 @@
-import { CategoryDTO } from "../../dto/CategoryDTO";
+import { CategoryDTO } from "../../dto/implementations/CategoryDTO";
 import { ICategoryDTO } from "../../dto/ICategoryDTO";
 import { Category } from "../../entities/Category"; 
 import { ICategoriesRepository } from "../ICategoriesRepositoryInMemory";
