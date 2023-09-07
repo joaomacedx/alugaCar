@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { IUserFactory } from "../../factories/IUserFactory";
 import { IUserDTO } from "../../dto/IUserDTO";
+import { AppError } from "../../../../errors/AppError";
 
 @injectable()
 class CreateUserUseCase {
@@ -15,7 +16,7 @@ class CreateUserUseCase {
         public async execute(data: IUserDTO) {
             const userAlreadyExists = await this.usersRepository.findByEmail(data.email);
             if (userAlreadyExists)  
-                throw new Error("User already exists");
+                throw new AppError("User already exists");
             const newUser = this.userFactory.build(data);
             await this.usersRepository.save(newUser);
         }

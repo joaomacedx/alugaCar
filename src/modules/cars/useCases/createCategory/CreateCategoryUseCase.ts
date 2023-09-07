@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { ICategoryDTO } from "../../dto/ICategoryDTO";
 import { ICategoryFactory } from "../../factories/ICategoryFactory";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
+import { AppError } from "../../../../errors/AppError";
 
 @injectable()
 class CreateCategoryUseCase {
@@ -13,7 +14,8 @@ class CreateCategoryUseCase {
   }
   public async execute(dto: ICategoryDTO): Promise<void>{ 
     const categoryAlreadyExists = await this.categoriesRepository.findByName(dto.name);
-    if (categoryAlreadyExists) throw new Error("Category already exists");
+    if (categoryAlreadyExists) 
+      throw new AppError("Category already exists");
     const category = this.categoriesFactory.build(dto);
     this.categoriesRepository.save(category);
   }
