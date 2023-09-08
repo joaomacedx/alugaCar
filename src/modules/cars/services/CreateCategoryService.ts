@@ -1,3 +1,4 @@
+import { AppError } from "../../../errors/AppError";
 import { ICategoryDTO } from "../dto/ICategoryDTO";
 import { ICategoryFactory } from "../factories/ICategoryFactory";
 import { ICategoriesRepository } from "../repositories/ICategoriesRepositoryInMemory";
@@ -10,7 +11,7 @@ class CreateCategoryService {
   public execute(dto: ICategoryDTO): void{ 
     const categoryAlreadyExists = this.categoriesRepository.findByName(dto);
     if (categoryAlreadyExists){
-      throw new Error("Category already exists");
+      throw new AppError("Category already exists");
     }
     const category = this.categoriesFactory.build(dto);
     this.categoriesRepository.save(category);

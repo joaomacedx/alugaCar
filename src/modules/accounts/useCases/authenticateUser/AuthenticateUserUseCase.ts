@@ -3,6 +3,7 @@ import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { IAuthenticateUserDTO } from "../../dto/IAuthenticateUserDTO";
+import { AppError } from "../../../../errors/AppError";
 
 @injectable()
 class AuthenticateUserUseCase {
@@ -14,11 +15,11 @@ class AuthenticateUserUseCase {
   public async execute(userData: IAuthenticateUserDTO): Promise<IAuthenticateUserResponse> {
     const userFoundByEmail = await this.usersRepository.findByEmail(userData.email);
     if(!userFoundByEmail) {
-      throw new Error("Email or password incorrect!");
+      throw new AppError("Email or password incorrect!");
     }
     const passworMatch = await compare(userData.password, userFoundByEmail.password);
     if(!passworMatch) {
-      throw new Error("Email or password incorrect!");
+      throw new AppError("Email or password incorrect!");
     }
     const token = sign(
         {}, 

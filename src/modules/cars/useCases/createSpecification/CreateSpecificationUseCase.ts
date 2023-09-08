@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { ISpecificationDTO } from "../../dto/ISpecificationDTO";
 import { ISpecificationFactory } from "../../factories/ISpecificationFactory";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
+import { AppError } from "../../../../errors/AppError";
 
 @injectable()
 class CreateSpecificationUseCase {
@@ -15,7 +16,8 @@ class CreateSpecificationUseCase {
   public async execute(dto: ISpecificationDTO): Promise<void>{ 
     try{
       const specificationAlreadyExists = await this.specificationRepository.findByName(dto.name);
-      if (specificationAlreadyExists) throw new Error("Specification already exists");
+      if (specificationAlreadyExists) 
+        throw new AppError("Specification already exists");
       const newSpecification = this.specificationFactory.build(dto);
       await this.specificationRepository.save(newSpecification);
     } catch (error) {

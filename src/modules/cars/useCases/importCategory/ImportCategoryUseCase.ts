@@ -5,6 +5,7 @@ import { CategoryDTO } from "../../dto/implementations/CategoryDTO";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 import * as ICategoryFactory from "../../factories/ICategoryFactory";
+import { AppError } from "../../../../errors/AppError";
 
 @injectable()
 class ImportCategoryUseCase{
@@ -21,7 +22,8 @@ class ImportCategoryUseCase{
     for (let index = 0; index < categories.length; index++) {
         let element = categories[index];
           let categoryAlreadyExists = await this.categoriesRepository.findByName(element.name);
-          if(categoryAlreadyExists) throw new Error("Category already exists, unable to proceed with the transaction");
+          if(categoryAlreadyExists) 
+            throw new AppError("Category already exists, unable to proceed with the transaction");
           let newCategoryToImport = this.categoryFactory.build(element);
         await this.categoriesRepository.save(newCategoryToImport);
       }
