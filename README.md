@@ -1,4 +1,4 @@
-# AlugaCar - Car Rental Management"
+# AlugaCar - Car Rental Management
 
 <div align="center">
   <img alt="AlugaCar" src="./assets/alugaCarLogo.jpg" >
