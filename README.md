@@ -1,4 +1,4 @@
-# AlugaCar - Gerenciamento de Aluguel de Carros
+# AlugaCar - Car Rental Management"
 
 <div align="center">
   <img alt="AlugaCar" src="./assets/alugaCarLogo.jpg" >
@@ -7,13 +7,15 @@
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joaomacedx/alugaCar?style=flat" >
   <img alt="Made by João Macêdo" src="https://img.shields.io/badge/made%20by-João%20Macêdo-blue">
  </div>
+
  
-O **AlugaCar** é uma aplicação sofisticada projetada para simplificar o processo de gerenciamento de aluguel de carros. Este projeto está sendo desenvolvido com um foco claro na adoção de princípios sólidos de engenharia de software e em uma arquitetura bem definida, inspirada nas diretrizes da **Clean Architecture** e do Clean Code. Essas escolhas estratégicas garantem a modularidade, flexibilidade e facilidade de manutenção do código, promovendo uma separação eficaz entre a lógica de negócios, a camada de interface e a infraestrutura.
+**AlugaCar** is a sophisticated application designed to simplify the car rental management process. This project is being developed with a clear focus on adopting solid software engineering principles and a well-defined architecture, inspired by the **Clean Architecture** and Clean Code guidelines. These strategic choices ensure code modularity, flexibility, and ease of maintenance, promoting effective separation between business logic, the interface layer, and infrastructure.
 
-## Princípios de Design e Arquitetura:
+## Design and Architecture Principles:
 
-Durante o desenvolvimento do AlugaCar, aplicamos os princípios **SOLID**, que são fundamentais para a criação de software robusto e escalável. Utilizei referências da Clean Architecture para estruturar o projeto de maneira coerente. Isso resultou em uma arquitetura onde cada componente possui responsabilidades claramente definidas, promovendo a coesão e a legibilidade do código. Alguns **Design Patterns** foram adotados, como **Factory**, **Repository**, **Singleton** e **Data Transfer Object**, aprimorando a reutilização de unidades e organização do código.
-## Estrutura do Projeto:
+During the development of AlugaCar, we applied the **SOLID** principles, which are fundamental for creating robust and scalable software. I used references from Clean Architecture to structure the project coherently. This resulted in an architecture where each component has clearly defined responsibilities, promoting code cohesion and readability. Some **Design Patterns** were adopted, such as **Factory**, **Repository**, **Singleton**, and **Data Transfer Object**, enhancing code reusability and organization.
+
+## Project Structure:
 ```
 alugaCar/
 |-- src/
@@ -44,62 +46,63 @@ alugaCar/
 |-- tsconfig.json 
 ```
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Technologies Used
 - TypeScript
-- NodeJS
+- Node.js
 - Express
 - TypeORM
 - tsyringe
 - Docker
 - Docker-Compose
+- 
+<hr>
 
-  - Optei por tecnologias poderosas para implementar o projeto AlugaCar, visando eficiência e escalabilidade. O projeto está sendo desenvolvido principalmente em TypeScript, uma linguagem que combina tipagem estática e funcionalidades modernas.
-  - O framework Node.js em conjunto com Express oferece uma base sólida para o desenvolvimento de APIs robustas e de alto desempenho. O banco de dados PostgreSQL foi escolhido devido à sua confiabilidade e capacidade de lidar com grandes volumes de dados de forma eficaz.
-  - O TypeORM permite código independente do banco de dados, com suporte direto a TypeScript e flexibilidade para trocar bancos facilmente, além de Migrations Automáticas o que  facilita a atualização e versionamento do banco de dados baseado em mudanças no código, e é compatível com diversos bancos de dados SQL e NoSQL.
-  - O tsyringe promove código desacoplado, facilitando testes e manutenção, Decorators Intuitivos que tornam o registro e a resolução de dependências mais limpos e claros, além de adicionar mínima sobrecarga ao projeto, mantendo a performance.
-
+- I opted for powerful technologies to implement the AlugaCar project, aiming for efficiency and scalability. The project is primarily being developed in TypeScript, a language that combines static typing and modern features.<br>
+- The Node.js framework, in conjunction with Express, provides a solid foundation for developing robust and high-performance APIs. The PostgreSQL database was chosen for its reliability and ability to handle large volumes of data effectively.<br>
+- TypeORM allows for database-independent code, with direct TypeScript support and flexibility for easily switching databases. It also offers Automatic Migrations, which facilitate database updates and versioning based on code changes, and it is compatible with various SQL and NoSQL databases.<br>
+- tsyringe promotes decoupled code, making testing and maintenance easier. It features intuitive decorators that make dependency registration and resolution cleaner and clearer while adding minimal overhead to the project, thus maintaining performance.<br>
 
 ## 🚀 How to run 🚀
 
 
-Clone o projeto e acesse sua pasta.
+Clone the project and access its folder.
 
 ```bash
 $ git clone https://github.com/joaomacedx/alugaCar.git
 $ cd alugaCar
 ```
 
-Para iniciá-lo, siga os passos abaixo:
+To start it, follow the steps below:
 ```bash
-# Instale as dependências
+# Install dependencies
 $ npm i
 ```
 
 ```bash
-# Faca a build do docker
+# Build the Docker
   docker-compose build
 ```
 ```bash
-# Execute o container
+# Run the container
 $ docker-compose up
 ```
 
 ```bash
-# Execute as migrations
+# Run the migrations
   npm run migration:run
 ```
 
 ## 📚 Docs 📚
 
   ```bash
-# Depois de iniciar o servidor, vá para:
+# After starting the server, go to:
 
 http://localhost:8080/api-docs
 ```
 
-## Contribua!
+## Contribute!
 
-Convido você a explorar a estrutura detalhada do projeto AlugaCar visitando o [repositório oficial no GitHub](https://github.com/joaomacedx/alugacar). Lá, você encontrará informações abrangentes sobre a implementação, a arquitetura e os padrões de design utilizados. A [Wiki oficial no GitHub](https://github.com/joaomacedx/alugaCar/wiki) do projeto oferece uma visão mais profunda e pode ser um ótimo ponto de partida para entender as regras para contribuição. Além disso, incentivamos e damos as boas-vindas a contribuições que possam enriquecer e expandir as funcionalidades do AlugaCar.
+I invite you to explore the detailed structure of the AlugaCar project by visiting the [official GitHub repository](https://github.com/joaomacedx/alugacar). There, you will find comprehensive information about the implementation, architecture, and design patterns used. The [official project Wiki on GitHub](https://github.com/joaomacedx/alugaCar/wiki) provides a deeper insight and can be an excellent starting point for understanding contribution guidelines. Additionally, we encourage and welcome contributions that can enrich and expand the functionalities of AlugaCar.
 
-**Equipe AlugaCar**
+**AlugaCar Team**
   - 📫 You can reach me at <a href="mailto:joaomacedx@gmail.com">joaomacedx@gmail.com</a><br>
