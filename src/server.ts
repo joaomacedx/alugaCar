@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import  Express, { NextFunction }  from 'express';
-import "express-async-errors";
+import 'express-async-errors';
 import routes from './routes/router';
 import swaggerUi from 'swagger-ui-express';
 import swaggerFile from './swagger.json';
@@ -13,7 +13,7 @@ createConnection();
 const app = Express();
 
 app.use(Express.json());
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(routes);
 
 app.use((error: Error, request: Request, response: Response, next: NextFunction ) => {
@@ -25,12 +25,12 @@ app.use((error: Error, request: Request, response: Response, next: NextFunction 
   }
 
   return response.status(500).json({
-    status: "error",
+    status: 'error',
     message: `Internal server error - ${error.message}`,
   });
 });
 
 app.listen(8080, () => {
-  console.log("Server is running");
+  console.log('AlugaCar - Server is running');
 });
 
