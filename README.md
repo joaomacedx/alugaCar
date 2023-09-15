@@ -54,7 +54,7 @@ alugaCar/
 - tsyringe
 - Docker
 - Docker-Compose
-- 
+
 <hr>
 
 - I opted for powerful technologies to implement the AlugaCar project, aiming for efficiency and scalability. The project is primarily being developed in TypeScript, a language that combines static typing and modern features.<br>
