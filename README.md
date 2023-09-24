@@ -15,36 +15,6 @@
 
 During the development of AlugaCar, we applied the **SOLID** principles, which are fundamental for creating robust and scalable software. I used references from Clean Architecture to structure the project coherently. This resulted in an architecture where each component has clearly defined responsibilities, promoting code cohesion and readability. Some **Design Patterns** were adopted, such as **Factory**, **Repository**, **Singleton**, and **Data Transfer Object**, enhancing code reusability and organization.
 
-## Project Structure:
-```
-alugaCar/
-|-- src/
-|   | — database/migrations
-|   |-- modules/
-|   |   |-- accounts/
-|   |   |   |-- entities/
-|   |   |   | -- factories/
-|   |   |   | -- repositories/
-|   |   |   |-- usecases/
-|   |   |-- cars/
-|   |   |   |-- entities/
-|   |   |   | -- factories/
-|   |   |   | -- repositories/
-|   |   |   |-- usecases/
-|   |-- routes/
-|   |-- shared/
-|   |   |-- container/
-|   |-- server.ts/
-|-- .dockerignore
-|-- .eslintrc.json
-|-- .gitignore
-|-- docker-compose.yml
-|-- package-lock.json
-|-- package.json
-|-- prettier.config.js
-|-- Dockerfile
-|-- tsconfig.json 
-```
 
 ## 🛠 Technologies Used
 - TypeScript
