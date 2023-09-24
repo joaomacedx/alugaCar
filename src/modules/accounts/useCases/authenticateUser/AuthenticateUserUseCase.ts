@@ -3,7 +3,7 @@ import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { IAuthenticateUserDTO } from "../../dto/IAuthenticateUserDTO";
-import { AppError } from "../../../../errors/AppError";
+import { AppError } from "@errors/AppError";
 
 @injectable()
 class AuthenticateUserUseCase {

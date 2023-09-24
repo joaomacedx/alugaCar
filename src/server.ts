@@ -6,8 +6,8 @@ import swaggerUi from 'swagger-ui-express';
 import swaggerFile from './swagger.json';
 import { createConnection } from './dataBase';
 import { Request, Response } from "express";
-import './shared/container/container';
-import { AppError } from './errors/AppError';
+import '@shared/container/container';
+import { AppError } from '@errors/AppError';
 
 createConnection();
 const app = Express();

@@ -1,4 +1,4 @@
-import { AppError } from "../../../errors/AppError";
+import { AppError } from "@errors/AppError";
 import { ICategoryDTO } from "../dto/ICategoryDTO";
 import { ICategoryFactory } from "../factories/ICategoryFactory";
 import { ICategoriesRepository } from "../repositories/ICategoriesRepositoryInMemory";

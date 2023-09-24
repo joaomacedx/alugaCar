@@ -1,4 +1,4 @@
-import { AppError } from "../../../../errors/AppError";
+import { AppError } from "@errors/AppError";
 import { AuthenticateUserDTO } from "../../dto/implementations/AuthenticateUserDTO";
 import { UserDTO } from "../../dto/implementations/UserDTO";
 import { UserFactory } from "../../factories/implementations/UserFactory";

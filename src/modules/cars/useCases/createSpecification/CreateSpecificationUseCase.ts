@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { ISpecificationDTO } from "../../dto/ISpecificationDTO";
 import { ISpecificationFactory } from "../../factories/ISpecificationFactory";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
-import { AppError } from "../../../../errors/AppError";
+import { AppError } from "@errors/AppError";
 
 @injectable()
 class CreateSpecificationUseCase {

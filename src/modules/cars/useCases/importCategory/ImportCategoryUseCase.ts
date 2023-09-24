@@ -5,7 +5,7 @@ import { CategoryDTO } from "../../dto/implementations/CategoryDTO";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 import * as ICategoryFactory from "../../factories/ICategoryFactory";
-import { AppError } from "../../../../errors/AppError";
+import { AppError } from "@errors/AppError";
 
 @injectable()
 class ImportCategoryUseCase{
