@@ -30,7 +30,6 @@ let usersFactory: UserFactory
       '00000000000000000000028922',
     );
     await createUserUseCase.execute(userData);
-
     const userDataToAuthenticate = new AuthenticateUserDTO(
       userData.email,
       password,
@@ -49,5 +48,28 @@ let usersFactory: UserFactory
         );
       
       }).rejects.toBeInstanceOf(AppError);
-  })
+  });  
+
+  it('should not be able to authenticate with incorrect password', async () => {
+    expect(async ()=> {
+      const password = 'EUestouFazendoMeuTeste';    
+      const passwordHash = await hash(password, 8);
+      const userData: UserDTO = new UserDTO(
+        'USER TO TEST ERROR',
+        '12,som,Testando@teste.com',
+        passwordHash,
+        '40028922',
+      );
+      await createUserUseCase.execute(userData);
+      const userDataToAuthenticate = new AuthenticateUserDTO(
+        userData.email,
+        'incorrectPassword',
+      );
+      await authenticateUserUseCase.execute(
+        userDataToAuthenticate,
+      );
+    
+    }).rejects.toBeInstanceOf(AppError);
+});
+
 });
