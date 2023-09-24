@@ -1,5 +1,5 @@
 import { IUserDTO } from "../../dto/IUserDTO";
-import { User } from "../../entities/User";
+import { User } from "../../infra/typeorm/entities/User";
 import { IUserFactory } from "../IUserFactory";
 
 class UserFactory implements IUserFactory {

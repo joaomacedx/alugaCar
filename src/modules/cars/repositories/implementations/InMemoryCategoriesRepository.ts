@@ -1,6 +1,6 @@
 import { CategoryDTO } from "../../dto/implementations/CategoryDTO";
 import { ICategoryDTO } from "../../dto/ICategoryDTO";
-import { Category } from "../../entities/Category"; 
+import { Category } from "../../infra/typeorm/entities/Category"; 
 import { ICategoriesRepository } from "../ICategoriesRepositoryInMemory";
 class CategoriesRepository implements ICategoriesRepository {
   private categories : Category[];

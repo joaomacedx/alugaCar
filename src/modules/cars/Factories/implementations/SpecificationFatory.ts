@@ -1,5 +1,5 @@
 import { ISpecificationDTO } from "../../dto/ISpecificationDTO";
-import { Specification } from "../../entities/Specification";
+import { Specification } from "../../infra/typeorm/entities/Specification";
 import { ISpecificationFactory } from "../ISpecificationFactory";
 
 class SpecificationFactory implements ISpecificationFactory{

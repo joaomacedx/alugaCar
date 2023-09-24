@@ -1,6 +1,6 @@
 import { ISpecificationDTO } from "../../dto/ISpecificationDTO";
 import { SpecificationDTO } from "../../dto/implementations/SpecificationDTO";
-import { Specification } from "../../entities/Specification";
+import { Specification } from "../../infra/typeorm/entities/Specification";
 import { ISpecificationsRepository } from "../ISpecificationsRepositoryInMemory";
 
 class SpecificationsRepository implements ISpecificationsRepository{
