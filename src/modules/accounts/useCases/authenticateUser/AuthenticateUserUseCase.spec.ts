@@ -35,5 +35,6 @@ let usersFactory: UserFactory
       password,
     );
     const result = await authenticateUserUseCase.execute(userDataToAuthenticate);
+    expect(result).toHaveProperty('token');
   });
 });
