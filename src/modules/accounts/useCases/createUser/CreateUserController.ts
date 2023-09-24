@@ -3,6 +3,7 @@ import { container } from "tsyringe";
 import { CreateUserUseCase } from "./CreateUserUseCase";
 import { UserDTO } from "../../dto/implementations/UserDTO"
 import { hash } from "bcryptjs";
+
 class CreateUserController {
   public async handle(request: Request, response: Response): Promise<Response> {
     const { name, email, password, driver_license } = request.body;

@@ -8,7 +8,7 @@ class InMemoryUsersRepository implements IUsersRepository {
   constructor() {}
 
   public async save(data: User): Promise<void> {
-    this.repository.push()
+    this.repository.push(data);
   }
   public async findByEmail(email: string): Promise<User> {
 
