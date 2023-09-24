@@ -1,3 +1,4 @@
+import { AppError } from "../../../../errors/AppError";
 import { AuthenticateUserDTO } from "../../dto/implementations/AuthenticateUserDTO";
 import { UserDTO } from "../../dto/implementations/UserDTO";
 import { UserFactory } from "../../factories/implementations/UserFactory";
@@ -37,4 +38,16 @@ let usersFactory: UserFactory
     const result = await authenticateUserUseCase.execute(userDataToAuthenticate);
     expect(result).toHaveProperty('token');
   });
+
+  it('should not be able to authenticate an nonexistent user', async () => {
+      expect(async ()=> {
+        await authenticateUserUseCase.execute(
+          new AuthenticateUserDTO(
+            'nonexistent@email.com',
+            'nonexistentUserPassword',
+          )
+        );
+      
+      }).rejects.toBeInstanceOf(AppError);
+  })
 });
