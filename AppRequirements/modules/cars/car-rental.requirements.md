@@ -16,3 +16,4 @@
 
 **RN02:** 
 - It should not be possible to register a new rental if there is already an open rental for the same car.
+
