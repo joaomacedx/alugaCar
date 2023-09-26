@@ -27,11 +27,6 @@ During the development of AlugaCar, we applied the **SOLID** principles, which a
 
 <hr>
 
-- I opted for powerful technologies to implement the AlugaCar project, aiming for efficiency and scalability. The project is primarily being developed in TypeScript, a language that combines static typing and modern features.<br>
-- The Node.js framework, in conjunction with Express, provides a solid foundation for developing robust and high-performance APIs. The PostgreSQL database was chosen for its reliability and ability to handle large volumes of data effectively.<br>
-- TypeORM allows for database-independent code, with direct TypeScript support and flexibility for easily switching databases. It also offers Automatic Migrations, which facilitate database updates and versioning based on code changes, and it is compatible with various SQL and NoSQL databases.<br>
-- tsyringe promotes decoupled code, making testing and maintenance easier. It features intuitive decorators that make dependency registration and resolution cleaner and clearer while adding minimal overhead to the project, thus maintaining performance.<br>
-
 ## 🚀 How to run 🚀
 
 
