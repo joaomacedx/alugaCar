@@ -20,3 +20,4 @@
 
 **RN04:** 
 - The user responsible for registration must be an administrator user
+
