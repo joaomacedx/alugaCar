@@ -1,7 +1,6 @@
 interface ICategoryDTO{
-   name: string;
-   description: string; 
+  name: string;
+  description: string; 
 }
 
 export { ICategoryDTO }
-
