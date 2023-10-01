@@ -1,16 +1,19 @@
-import { Cars } from "@modules/cars/infra/typeorm/entities/Cars";
+import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 import { ICarsRepository } from "../ICarsRepository";
 
 class InMemoryCarsRepository implements ICarsRepository {
+  private carsRepository: Car[] = [];
 
-  findByName(name: string): Promise<Cars> {
-    throw new Error("Method not implemented.");
+  public async findByName(name: string): Promise<Car> {
+    return this.carsRepository.find((car: Car) =>{
+      car.name == name;
+    });
   }
-  list(): Promise<Cars[]> {
-    throw new Error("Method not implemented.");
+  public async list(): Promise<Car[]> {
+    return this.carsRepository;
   }
-  save(category: Cars): Promise<void> {
-    throw new Error("Method not implemented.");
+  public async save(car: Car): Promise<void> {
+    this.carsRepository.push(car);
   }
 
 }

@@ -1,9 +1,9 @@
-import { Cars } from "../infra/typeorm/entities/Cars";
+import { Car } from "../infra/typeorm/entities/Car";
 
 interface ICarsRepository {
-  findByName(name: string) : Promise<Cars>;
-  list(): Promise<Cars[]>;
-  save(category: Cars): Promise<void>;
+  findByName(name: string) : Promise<Car>;
+  list(): Promise<Car[]>;
+  save(category: Car): Promise<void>;
 }
 
 export { ICarsRepository }

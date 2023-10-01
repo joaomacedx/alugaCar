@@ -1,7 +1,7 @@
 import { ICarDTO } from "../dto/ICarDTO";
-import { Cars } from "../infra/typeorm/entities/Cars";
+import { Car } from "../infra/typeorm/entities/Car";
 
 interface ICarFactory{
-  build(dto: ICarDTO): Cars;
+  build(dto: ICarDTO): Car;
 }
 export { ICarFactory }
