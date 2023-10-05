@@ -1,15 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
+import { ICarDTO } from "../ICarDTO";
 
-class Car{
-  id?: string;
+class CarDTO implements ICarDTO {
+
   name: string;
   description: string;
   daily_rate: number;
-  available: boolean;
   license_plate: string;
   fine_amount: number;
   brand: string;
-  created_at: Date;
   category_id: string;
 
   constructor(
@@ -21,9 +19,6 @@ class Car{
     brand: string,
     category_id: string,
   ) {
-    if(!this.id) {
-      this.id = uuidv4();
-    }
     this.name = name;
     this.description = description;
     this.daily_rate = daily_rate;
@@ -33,5 +28,4 @@ class Car{
     this.category_id = category_id;
   }
 }
-export { Car }
-
+export { CarDTO }

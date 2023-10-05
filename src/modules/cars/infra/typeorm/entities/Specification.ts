@@ -13,7 +13,7 @@ class Specification{
   created_at: Date;
 
   constructor(
-      name : string, 
+    name : string, 
     description: string,
     ) {
     if(!this.id) {

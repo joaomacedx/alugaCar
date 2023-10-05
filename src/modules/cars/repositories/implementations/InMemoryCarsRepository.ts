@@ -9,11 +9,19 @@ class InMemoryCarsRepository implements ICarsRepository {
       car.name == name;
     });
   }
+
   public async list(): Promise<Car[]> {
     return this.carsRepository;
   }
+
   public async save(car: Car): Promise<void> {
     this.carsRepository.push(car);
+  }
+
+  public async findByLicensePlate(license_plate: string): Promise<Car> {
+    return this.carsRepository.find((car: Car) => {
+      car.license_plate == license_plate;
+    });
   }
 
 }
