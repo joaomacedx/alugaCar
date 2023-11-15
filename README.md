@@ -11,11 +11,11 @@
  
 **AlugaCar** is a sophisticated application designed to simplify the car rental management process. This project is being developed with a clear focus on adopting solid software engineering principles and a well-defined architecture, inspired by the **Clean Architecture** and Clean Code guidelines. These strategic choices ensure code modularity, flexibility, and ease of maintenance, promoting effective separation between business logic, the interface layer, and infrastructure.
 ### Requirements: 
- 1. [Car Registration](./AppRequirements/modules/cars/car-registration.requirements.md)
- 2. [Car Image Registration](./AppRequirements/modules/cars/car-image-registration.requirements.md)
- 3. [Car Listing](./AppRequirements/modules/cars/car-listing.requirements.md)
- 4. [Car Specification Registration](./AppRequirements/modules/cars/car-specification-registration.requirements.md)
- 5. [Car Rental](./AppRequirements/modules/cars/car-rental.requirements.md)
+ 1. [Car Registration](./.requirements/modules/cars/car-registration.requirements.md)
+ 2. [Car Image Registration](./.requirements/modules/cars/car-image-registration.requirements.md)
+ 3. [Car Listing](./.requirements/modules/cars/car-listing.requirements.md)
+ 4. [Car Specification Registration](./.requirements/modules/cars/car-specification-registration.requirements.md)
+ 5. [Car Rental](./.requirements/modules/cars/car-rental.requirements.md)
 ### Design and Architecture Principles:
 
 During the development of AlugaCar, we applied the **SOLID** principles, which are fundamental for creating robust and scalable software. I used references from Clean Architecture to structure the project coherently. This resulted in an architecture where each component has clearly defined responsibilities, promoting code cohesion and readability. Some **Design Patterns** were adopted, such as **Factory**, **Repository**, **Singleton**, and **Data Transfer Object**, enhancing code reusability and organization.
